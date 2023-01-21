@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+*, * > *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+:root{
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+--Dark-grayish-cyan: hsl(186, 14%, 43%);
+--Grayish-cyan: hsl(184, 14%, 56%);
+--Light-grayish-cyan: hsl(185, 41%, 84%);
+--Very-light-grayish-cyan: hsl(189, 41%, 97%);
+--White: hsl(0, 0%, 100%);
+}
+
+
+body{
+    background-color: var(--Light-grayish-cyan);
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main{
+    padding: 1rem;
+    background-color: #fff;
+    width: 300px;
+    border-radius: 14px;
+}
+
+.logo{
+    /* width: 100px; */
+    margin-top: 2rem;
+}
+
+.bill{
+position: relative;
+
+}
+
+.dollar{
+    width: 9px;
+    position: absolute;
+    top: 32px;
+    left: 13px;
+}
+
+span.bill{
+    position: absolute;
+    top: 32px;
+    right: 13px;
+   
+}
+
+
+
+label{
+    display: block;
+    color: var(--Very-dark-cyan);
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+ input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} 
+
+input[type="number"] {
+    padding-right: 9px;
+    font-size: 1.5rem;
+    height: 35px;
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    margin-top: 3px;
+    width: 100%;
+    text-align: end;
+    color: var(--Very-dark-cyan);
+    -moz-appearance: textfield;
+}
+#bill:focus-visible{
+    border: 2px solid hsl(172, 67%, 45%);
+    }
+
+.tip h2{
+    color: var(--Very-dark-cyan);
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.tip ul{
+    margin-top: .5rem;
+    list-style: none;
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 1fr);
+    font-weight: 700;
+}
+
+.percentage{
+    border: none;
+    outline: none;
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+     width: 100%;
+     padding: 0.4rem 0;
+    border-radius: 5px;
+}
+
+.percentage:hover,.active{
+    cursor: pointer;
+    background-color: hsl(172, 67%, 45%);
+    color: var(--Very-dark-cyan);
+    
+}
+
+
+
+.tip ul li:last-child button{
+     color: var(--Very-dark-cyan); 
+     background-color: hsl(189, 41%, 97%);
+     font-weight: bold;
+}
+
+.peoples{
+    margin-top: 1rem;
+    position: relative;
+}
+
+.contact{
+    width: 10px;
+    position: absolute;
+    top: 32px;
+    left: 13px;
+}
+
+.zero{
+    font-size: 15px;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    color: red;
+    display: none;
+}
+
+.second-section{
+    background-color: var(--Very-dark-cyan);
+    margin-top: 1.3rem;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.tip-amount{
+    padding-top: .2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.tip-amount-first{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.tip-amount-first > p{
+    margin-top: .5rem;
+    color: #fff;
+    font-size: 13px;
+}
+
+.tip-amount-first small{
+    font-size: 12px;
+    color: #fff;
+    opacity: 50%;
+}
+
+p.tip-person{
+/* margin-top: .2rem; */
+font-size: 1.5rem;
+color: hsl(172, 67%, 45%);
+}
+
+
+.btn-second{
+    margin-top: 1.3rem;
+    background-color: hsl(172, 67%, 45%);
+    color: var(--Very-dark-cyan);
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 5px 0;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bolder;
+   
+}
+.btn-first{
+    margin-top: 1.3rem;
+    background-color: hsl(172, 67%, 45%);
+    color: var(--Very-dark-cyan);
+    opacity: 15%;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 5px 0;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+footer{
+    margin-top: 2rem;
+}
+
+
+
+@media(min-width: 768px){
+    main{
+        
+        width: 700px;
+        max-width: 700px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+    .tip ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .second-section{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .btn-first,.btn-second{
+      margin-top: 5.4rem;
+     
+    }
+}
+
